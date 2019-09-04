@@ -1,0 +1,68 @@
+import numpy as np
+import cv2
+cap = cv2.VideoCapture(0) //실시간 연결된 캠
+cap.set(3,640) # set Width
+cap.set(4,480) # set Height
+while(True): // 이미지를 계속 받아야하므로 
+     ret, frame = cap.read() 
+//ret = return의 약자,
+//read() 함수에서 캠의 영상 Frame이 제대로 읽혔다면 "True"를 오류가 났다면 "False"를 내보낸다.
+
+    frame = cv2.flip(frame, -1) # Flip camera vertically
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    
+    cv2.imshow('frame', frame) 
+	//'frame' = 창의이름, frame = 이미지 데이터가 들어있는 변수 
+    cv2.imshow('gray', gray)
+    
+    k = cv2.waitKey(30) & 0xff
+    if k == 27: # press 'ESC' to quit
+        break
+
+
+
+////////////////////////////메서드
+cap.release()
+cv2.destroyAllWindows() // 켜져있는 모든 창을 끈다.
+imshow() = 이미지 창을 띄운다
+imread() = 이미지를 불러오는 함수
+imwrite() = 이미지를 저장하는 함수
+cvtcolor() = 불러온 이미지의 색상을 변경할 수 있는 함수
+flip() = 카메라 반전함수
+CascadeClassfier() = OpenCV의 xml파일을 불러오기 위한 함수(openCV에서 기학습된 모델들)
+   //faceCascade = cv2.CascadeClassifier('Cascades/haarcascade_frontalface_default.xml')
+detectMultiScale()은 입력 이미지에서 얼굴을 검출하는 함수이다.
+getImages() = 이미지 학습전 폴더내의 사진을 전처리하는 함수.
+rectangle() = 얼굴 검출시 얼굴부분에 녹색 상자 생성
+
+
+
+
+
+
+///////////////////////////변수
+
+cap - VideoCapture함수를 나타내기위한(연결캠을 나타내기 위한 변수)
+recognizer - 얼굴이미지를 숫자로 변환했을때의 해당하는 값
+  ->정확도를 향상시키기 위해 getImages()함수를 사용해 폴더내의 이미지들을 전처리한다.
+ret, img = 이미지와 관련된 변수(캠 영상 frame이 제대로 읽혔는지 아닌지에 대한것)
+faceCascade = xml파일을 불러오는데 사용되는 변수
+faceid = 사람을 구분해줄 숫자를 입력받는다.
+faces = detectMultiScale() 함수를 사용하기 위한 변수(얼굴 검출)
+frame = 카메라를 상하반전 시키기 위한 변수(카메라의 각도에 따라 불필요할 수도 있음)<cv2.flip>
+names = 사진과 매칭되는 인물들에 이름을 설정하는 변수
+
+confidence = 이미지 비교 유사도를 나타내는 변수(일정퍼센트 이상이면 동일 인물로 간주함)
+ ->if (confidence > 일정퍼센트) : (ex:75)
+        ~ 
+
+
+imageSave 클래스 : 이미지저장 + 이미지 학습
+
+
+gray는 input 값으로 이전에 얻은 grayscale image입력 하는 것을 의미한다.
+scaleFactor는 각 이미지 스케일마다 이미지 사이즈를 얼마나 줄일 것인지를 의미한다.
+minNeighbors는 무슨말인지 잘 모르겠지만 직역해보면,
+각 후보 rectangle이 얼마나 많은 neighbors를 가져야하는지를 명시하는 파라미터이다.
+
+
