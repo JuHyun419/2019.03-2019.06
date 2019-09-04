@@ -1,0 +1,37 @@
+http://www.rasplay.org/?p=2673
+ //라즈베리파이 USB전류, 실시간 스트리밍, 웹 확인
+
+
+http://blog.naver.com/PostView.nhn?blogId=rhrkdfus&logNo=221402019076&from=search&redirect=Log&widgetTypeCall=true&directAccess=false
+ //라즈베리파이 motion 스트리밍, 카메라 속도 조절(frame 설정)
+
+
+https://motion-project.github.io/motion_config.html#OptTopic_Image_Processing
+ //motion SW 설명
+
+
+http://blog.naver.com/PostView.nhn?blogId=nicepants&logNo=220808526202
+ //motion 블로그 설명
+
+ 
+http://www.lavrsen.dk/foswiki/bin/view/Motion/ConfigFileOptions
+ //motion SW 설명
+
+
+https://itworldexplorer.blogspot.com/2017/08/rtsp-ip-motion.html
+ 
+
+https://blog.naver.com/pihyang24/221516607500
+ //HTML 하이퍼링크<a href...> 설명
+
+
+http://progtrend.blogspot.com/2017/08/raspberry-pi.html
+ //PI 간단한 명령어 설명
+
+ 
+https://blog.naver.com/aneminw/221465443721
+ //리눅스 권한 부여 설명
+
+
+https://itworldexplorer.blogspot.com/2017/08/rtsp-ip-motion.html
+ //Motion 설정 설명

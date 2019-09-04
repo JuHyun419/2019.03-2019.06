@@ -1,0 +1,34 @@
+gksudo -> pcmanfm => 허가거부 파일 삭제
+Fcitx -> 한글파일
+
+sudo service motion start
+sudo service motion restart
+sudo service motion stop
+sudo motion -n
+sudo service motion status
+sudo su => 관리자 권한
+chmod => 권한수정, 톰캣
+
+
+내부 : http://localhost:8080/TheftPrevention/NewFile2.jsp
+외부 : cvcvcam1.iptime.org:8080/파일 ~
+ 
+ 
+
+★★★★ sudo nano /etc/motion/motion.conf 수정한것들 ★★★★ 
+snapshot, on_picture_save 부분 확인!
+minimum_frame_time
+pre_capture(0=>5=>0), post_capture(0=>5=>0), emulate_motion(off=>on=>off)_ 수정함
+output_pictures(off=>on=>first=>center)
+snapshot_interval 10(정의된 초마다 사진이 찍힘)
+locate_motion_mode(off=>on)
+locate_motion_style(bod=>redbox)
+event_gap(60=>10)
+
+ 
+
+ 
+*2차
+text_left value => text_left Capston Design
+threshold(1500=>1000)
+ -동작 선언을 위한 임계값, threshold로 정의된 것보다 많은 픽셀이 변경된 경우 모션을 감지했다고 가정
