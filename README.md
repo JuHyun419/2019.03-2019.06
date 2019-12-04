@@ -23,3 +23,10 @@
 ## 하드웨어(3D Print)
 ![3D프린터 시스템설계 뚜껑1](https://user-images.githubusercontent.com/50076031/68087042-63d50d80-fe95-11e9-812a-75a904a86502.PNG)
 ![image](https://user-images.githubusercontent.com/50076031/68087077-9f6fd780-fe95-11e9-8b00-d629c3c8910e.png)
+
+
+
+
+##  관련된 내용은 [`NaverBlog`] 에서 확인하실 수 있습니다.  
+
+[`NaverBlog`]: https://blog.naver.com/zzang9ha/221725547888
